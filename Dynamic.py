@@ -97,7 +97,7 @@ table = {}
 for i in range(len(chargeValue)):
     table['x' + str(i)] = chargeValue[i]
     table['f1' + str(i)] = priceSchedule[0] * (chargeValue[i] * -0.001)
-    table['g1' + str(i)] = targetCharge - (loadSchedule[0] + constantLoad) + chargeValue[i]
+    table['g1' + str(i)] = initCharge - (loadSchedule[0] + constantLoad) + chargeValue[i]
 
 dict_24, index_of_best_value, best_value = forward_calculating(table)
 
